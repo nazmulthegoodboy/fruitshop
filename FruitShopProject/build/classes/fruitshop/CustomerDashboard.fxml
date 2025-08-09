@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="fruitshop.CustomerDashboardController" style="-fx-background-color: linear-gradient(to bottom right, #e8f5e9, #a5d6a7);">
+    <top>
+        <HBox spacing="15" alignment="CENTER_LEFT" style="-fx-background-color: #2e7d32; -fx-padding: 12 20; -fx-border-color: #1b5e20; -fx-border-width: 0 0 2 0; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 4,0,0,1);">
+            <Label text="🍉 Customer Panel" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-font-weight: bold;" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button text="Logout" fx:id="logoutBtn" onAction="#onLogout" style="-fx-background-color: #c62828; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 5; -fx-padding: 8 18; -fx-cursor: hand;" />
+        </HBox>
+    </top>
+
+    <center>
+        <TableView fx:id="fruitTable" prefHeight="400" style="-fx-background-color: #f1f8e9; -fx-font-size: 14px;">
+            <columns>
+                <TableColumn text="Fruit Name" fx:id="nameCol" prefWidth="220" />
+                <TableColumn text="Price" fx:id="priceCol" prefWidth="120" />
+                <TableColumn text="Stock" fx:id="stockCol" prefWidth="120" />
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_LEFT" style="-fx-background-color: #a5d6a7; -fx-padding: 15 20; -fx-border-color: #81c784; -fx-border-width: 2 0 0 0; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 4,0,0,-1);">
+            <Label text="Qty:" style="-fx-font-size: 14px; -fx-font-weight: bold;"/>
+            <TextField fx:id="quantityField" prefWidth="80" style="-fx-padding: 6 10; -fx-background-radius: 5; -fx-border-radius: 5; -fx-border-color: #4caf50; -fx-font-size: 14px;"/>
+            <Button text="Add to Cart" fx:id="addToCartBtn" onAction="#onAddToCart" style="-fx-background-color: #388e3c; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 6; -fx-padding: 8 20; -fx-cursor: hand;"/>
+            <Label fx:id="cartSummary" text="Cart: 0 items | Total: $0.00" style="-fx-font-weight: bold; -fx-font-size: 14px;"/>
+        </HBox>
+    </bottom>
+</BorderPane>

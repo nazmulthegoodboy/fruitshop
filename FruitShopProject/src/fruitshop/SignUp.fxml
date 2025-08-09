@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="fruitshop.SignUpController" style="-fx-background-color: linear-gradient(to bottom right, #e0f7fa, #80deea);">
+    <center>
+        <VBox alignment="CENTER" spacing="18" style="-fx-background-color: white; -fx-padding: 40 30 40 30; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 8,0,0,4);">
+            
+            <Label text="Create Account" style="-fx-font-size: 26px; -fx-font-weight: bold; -fx-text-fill: #00796b;" />
+            
+            <TextField fx:id="usernameField" promptText="Username"
+                       style="-fx-pref-width: 280px; -fx-padding: 10 14; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #00796b; -fx-font-size: 14px;" />
+            
+            <PasswordField fx:id="passwordField" promptText="Password"
+                           style="-fx-pref-width: 280px; -fx-padding: 10 14; -fx-background-radius: 8; -fx-border-radius: 8; -fx-border-color: #00796b; -fx-font-size: 14px;" />
+            
+            <ComboBox fx:id="roleCombo" promptText="Select Role"
+                      style="-fx-pref-width: 280px; -fx-background-radius: 8; -fx-font-size: 14px;" />
+            
+            <Button text="Sign Up" fx:id="signupBtn" onAction="#onSignUp"
+                    style="-fx-background-color: #00796b; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 10; -fx-padding: 10 40; -fx-cursor: hand;" />
+            
+        </VBox>
+    </center>
+</BorderPane>
